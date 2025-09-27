@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมฝึกความไว</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="welcome-screen" class="screen active">
+        <div class="content-box">
+            <h1>เกมฝึกการตอบสนอง</h1>
+            <div class="form-group">
+                <label for="name-input">ชื่อ</label>
+                <input type="text" id="name-input" placeholder="กรุณาใส่ชื่อของคุณ">
+            </div>
+            <div class="form-group">
+                <label for="age-input">อายุ</label>
+                <input type="number" id="age-input" placeholder="กรุณาใส่อายุ">
+            </div>
+            <button id="enter-game-btn">เข้าสู่เกม</button>
+        </div>
+    </div>
+
+    <div id="game-screen" class="screen">
+        <div class="game-hud">
+            <div id="time-display">เวลา: 60 วินาที</div>
+            <div id="score-display">คะแนน: 0</div>
+        </div>
+        <button id="start-game-btn">เริ่มเกม</button>
+        <div id="game-grid">
+            </div>
+    </div>
+    
+    <div id="stats-screen" class="screen">
+        <div class="content-box">
+            <h1>สถิติของคุณ</h1>
+            <div id="stats-container"></div>
+            <button id="back-to-game-btn">กลับไปหน้าเกม</button>
+        </div>
+    </div>
+
+    <div id="game-over-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 id="modal-summary">ผลลัพธ์</h2>
+            <p id="modal-reaction-time">Reaction Time เฉลี่ย: 0 วินาที</p>
+            <div class="modal-buttons">
+                <button id="play-again-btn">เริ่มเกมใหม่</button>
+                <button id="view-stats-btn">ดูสถิติ</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="start-sound" src="start.mp3"></audio>
+    <audio id="correct-sound" src="correct.mp3"></audio>
+    <audio id="end-sound" src="end.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
