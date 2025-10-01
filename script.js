@@ -233,26 +233,24 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('playerStats', JSON.stringify(stats));
     }
 
-    function sendDataToBackend(data) {
-        if (SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbymibjR_OruxgR8YV4CRfGWWbvVj7KucG2VYzgHwb7IenGrkoD_648JvF6jx55KuNal4g/exec' || !SCRIPT_URL) {
-            console.warn("Google Apps Script URL is not set. Data will not be saved to Google Sheets.");
-            return;
-        }
-        
-        fetch(SCRIPT_URL, {
-            method: 'POST',
-            mode: 'no-cors', 
-            cache: 'no-cache',
-            headers: {
-              'Content-Type': 'text/plain;charset=utf-8',
-            },
-            body: JSON.stringify(data)
-        })
-        .then(() => console.log('Data sent successfully to Google Sheets.'))
-        .catch(error => console.error('Error sending data:', error));
+   // โค้ดที่แก้ไขแล้ว
+function sendDataToBackend(data) {
+    // ตรวจสอบว่า URL ยังเป็นค่าเริ่มต้นที่ให้กรอกหรือไม่
+    if (SCRIPT_URL === 'YOUR_COPIED_WEB_APP_URL_HERE' || !SCRIPT_URL) {
+        console.warn("Google Apps Script URL is not set. Data will not be saved to Google Sheets.");
+        return;
     }
-
-    // Start the application
-    init();
-
-});
+    
+    // ถ้า URL ถูกต้อง จะทำงานส่วนนี้ต่อ
+    fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', 
+        cache: 'no-cache',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(data)
+    })
+    .then(() => console.log('Data sent successfully to Google Sheets.'))
+    .catch(error => console.error('Error sending data:', error));
+}
