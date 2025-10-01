@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function sendDataToBackend(data) {
-        if (SCRIPT_URL === 'YOUR_COPIED_WEB_APP_URL_HERE' || !SCRIPT_URL) {
+        if (SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbymibjR_OruxgR8YV4CRfGWWbvVj7KucG2VYzgHwb7IenGrkoD_648JvF6jx55KuNal4g/exec' || !SCRIPT_URL) {
             console.warn("Google Apps Script URL is not set. Data will not be saved to Google Sheets.");
             return;
         }
@@ -254,4 +254,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start the application
     init();
+
 });
