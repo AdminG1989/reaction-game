@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- IMPORTANT ---
     // PASTE YOUR GOOGLE APPS SCRIPT URL HERE (แก้ไข: เพิ่มเครื่องหมาย quotes)
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbymibjR_OruxgR8YV4CRfGWWbvVj7KucG2VYzgHwb7IenGrkoD_648JvF6jx55KuNal4g/exec"; 
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwSPWHYnU9Uf3eKR-w01IdCPbXQbsg9jy64zj_JOf-0eqerUXlxqiMEnCic6k802VjltA/exec'; 
     
     // DOM Elements
     const screens = {
@@ -254,3 +254,4 @@ function sendDataToBackend(data) {
     .then(() => console.log('Data sent successfully to Google Sheets.'))
     .catch(error => console.error('Error sending data:', error));
 }
+
